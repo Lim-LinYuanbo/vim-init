@@ -141,6 +141,10 @@ if index(g:bundle_group, 'basic') >= 0
 	let g:signify_vcs_cmds = {
 			\ 'git': 'git diff --no-color --diff-algorithm=histogram --no-ext-diff -U0 -- %f',
 			\}
+
+	" vim-preview p:打开预览; P:关闭预览
+	autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+	autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 endif
 
 
